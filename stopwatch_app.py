@@ -50,9 +50,15 @@ with col3:
     if st.button("Reset"):
         reset_stopwatch()
 
-# Update the elapsed time if the stopwatch is currently running
-if st.session_state.running:
-    st.session_state.elapsed_time = time.time() - st.session_state.start_time
+# Placeholder to display the elapsed time
+timer_placeholder = st.empty()  # Create an empty placeholder for the timer display
 
-# Display the formatted elapsed time with two decimal places
-st.write(f"### Elapsed Time: {st.session_state.elapsed_time:.2f} seconds")
+# Update the elapsed time if the stopwatch is currently running
+while st.session_state.running:
+    st.session_state.elapsed_time = time.time() - st.session_state.start_time  # Calculate elapsed time
+    timer_placeholder.write(f"### Elapsed Time: {st.session_state.elapsed_time:.2f} seconds")  # Update display
+    time.sleep(0.1)  # Sleep for a short duration to update the timer every 0.1 seconds
+
+# Display the formatted elapsed time with two decimal places when the stopwatch is stopped
+timer_placeholder.write(f"### Elapsed Time: {st.session_state.elapsed_time:.2f} seconds")
+
