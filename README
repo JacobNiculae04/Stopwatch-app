@@ -1,0 +1,23 @@
+# 🕒 Stopwatch Timer App
+
+This is a simple **stopwatch timer app** built with **Streamlit**. It allows users to start, stop, and reset a timer with an easy-to-use web interface.
+
+## 🚀 Features
+
+- **Start** the stopwatch
+- **Stop** the stopwatch
+- **Reset** the stopwatch
+- Displays the **elapsed time** in seconds
+
+## 🛠️ Requirements
+
+- **Python 3.x**
+- **Streamlit**
+
+## 📦 Installation
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
